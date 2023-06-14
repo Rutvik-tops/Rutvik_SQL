@@ -1,0 +1,82 @@
+use dt1;
+select * from python;
+
+select S_NAME from python
+where S_ROLLNO = 5 and S_CITY = "Sidhpur";
+
+select * from python
+where S_ROLLNO = 5 or S_CITY = "Sidhpur";
+
+select * from python
+order by S_NAME asc;
+
+select * from python
+order by S_NAME desc;
+
+select min(S_ROLLNO) from python;
+
+select max(S_ROLLNO) from python;
+
+select * from python;
+
+SELECT DISTINCT * FROM PYTHON;
+
+CREATE TABLE DFG SELECT * FROM PYTHON ;
+
+
+
+CREATE TABLE BN 
+(
+BN_ENROLL INT PRIMARY KEY,
+BN_FNAME VARCHAR (20),
+BN_ADDRESS VARCHAR (20)
+);
+
+INSERT INTO BN (BN_ENROLL,BN_FNAME) SELECT S_ROLLNO,S_NAME FROM PYTHON;
+
+SELECT * FROM BN;
+
+SELECT * FROM BN
+LIMIT 4 ; 
+
+SELECT * FROM BN WHERE BN_FNAME LIKE "%R";
+
+SELECT * FROM BN WHERE BN_FNAME LIKE "%M";
+
+SELECT * FROM BN WHERE BN_FNAME LIKE "%UB%";
+
+SELECT BN_ENROLL , BN_FNAME FROM BN  WHERE BN_FNAME LIKE "%UB%";
+
+SELECT * FROM BN;
+
+SELECT * FROM BN WHERE BN_FNAME LIKE "S%M";
+
+SELECT * FROM BN WHERE BN_FNAME NOT  LIKE "S%M";
+
+SELECT * FROM SAMPLE;
+
+DROP TABLE SAMMPLE;
+
+SELECT * FROM DAY ;
+
+ALTER TABLE DAY 
+DROP COLUMN ROLLNO;
+
+ALTER TABLE DAY 
+ADD COLUMN ROLLNO INT PRIMARY KEY  AUTO_INCREMENT;
+
+SELECT * FROM DAY;
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

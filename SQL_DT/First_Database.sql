@@ -1,0 +1,23 @@
+CREATE DATABASE RUTVIK11 ;
+USE RUTVIK11 ;
+CREATE TABLE STUDENT 
+(
+F_ROLLNO INT , 
+F_NAME VARCHAR(50),
+L_NAME VARCHAR(50),
+S_CITY VARCHAR(20)
+);
+
+SELECT * FROM STUDENT ;
+
+INSERT INTO STUDENT ( F_ROLLNO, F_NAME, L_NAME, S_CITY) VALUES
+(12," RUTVIK ", "PATEL ","AHMEDABAD") , (13,"Raj" , "Patel","Ahmedabad"),(15,"Rahul" , "Patel ", "Ahmedabad" ),(14,"rutvik","Patel","Ahmedabad"),(16,"Raj","Patel","Ahemadad");
+
+
+INSERT INTO STUDENT (F_ROLLNO,S_CITY) VALUES 
+(13,"AHMEDABAD");
+
+
+
+
+
