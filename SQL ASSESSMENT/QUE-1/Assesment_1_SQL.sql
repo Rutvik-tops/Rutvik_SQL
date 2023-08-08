@@ -1,6 +1,7 @@
 Create Database Worker;
 use worker;
 
+
 Create table details
 (
 WORKER_ID INT PRIMARY KEY,
@@ -50,6 +51,28 @@ LIMIT 6 ;
 SELECT DEPARTMENT FROM DETAILS
 GROUP BY DEPARTMENT 
 HAVING COUNT(*) < 5 ;
+
+
+/* 8. Write an SQL query to show all departments along with the number of people in there. */
+
+
+SELECT DEPARTMENT,COUNT(*) AS TOTALWORKERS
+FROM DETAILS
+GROUP BY DEPARTMENT
+HAVING  COUNT(*) < 5;
+
+/* 9. Write an SQL query to print the name of employees having the highest salary in each
+department. */
+
+SELECT * FROM DETAILS;
+
+SELECT DEPARTMENT , CONCAT(FIRST_NAME,' ',LAST_NAME) AS EMPLOYENAME , SALARY
+FROM DETAILS
+WHERE (DEPARTMENT, SALARY) IN ( 
+  SELECT DEPARTMENT,MAX(SALARY)
+  FROM DETAILS
+  GROUP BY DEPARTMENT
+);
 
 
 
